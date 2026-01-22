@@ -1,0 +1,9 @@
+Internet User
+   |
+   | HTTP :5000
+   v
+Public Flask App (0.0.0.0:5000)
+   |
+   | SSRF fetch
+   v
+Internal Flask Service (127.0.0.1:5001)
